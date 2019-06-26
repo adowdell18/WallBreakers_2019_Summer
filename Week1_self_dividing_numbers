@@ -1,0 +1,36 @@
+#sdLst = []
+
+class Solution:
+    #sdLst = []
+    def __init__(self):
+        self.sdLst = []
+    def selfDividingNumbers(self, left, right):
+        """
+        :type left: int
+        :type right: int
+        :rtype: List[int]
+        """
+        print(left)
+        print(right)
+        
+        sd = True
+        #c = l
+        if (left <= right):
+            y = str(left)
+
+            for char in y:
+                dig = int(char)
+                if (dig == 0):
+                    sd = False;
+                else:
+                    if ((left % dig) != 0):
+                        sd = False
+            if (sd == True):
+                self.sdLst.append(left)
+            left += 1
+            #print(left)
+            self.selfDividingNumbers(left,right)
+            int(left)
+
+            
+        return self.sdLst
