@@ -1,0 +1,22 @@
+def flipAndInvertImage(A,cp):
+    
+        #A = [0 if i == 1 else 1 for i in A]
+        if cp < len(A):
+            A[cp].reverse()
+            A[cp] = [0 if i == 1 else 1 for i in A[cp]]
+            cp += 1
+            #print(cp)
+            #print(len(A))
+            #print("inverted")
+            flipAndInvertImage(A, cp)
+        return A
+class Solution:
+
+    def flipAndInvertImage(self, A):
+        """
+        :type A: List[List[int]]
+        :rtype: List[List[int]]
+        """
+        A = flipAndInvertImage(A, 0)
+        
+        return A
