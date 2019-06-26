@@ -1,0 +1,22 @@
+class Solution:
+    def __init__(self):
+        self.strings = []
+        self.c = 1
+    def fizzBuzz(self, n):
+        """
+        :type n: int
+        :rtype: List[str]
+        """
+        if (self.c <= n):
+            #print(counter, value)
+            if (self.c % 3 == 0) and (self.c  % 5 == 0):
+                self.strings.append("FizzBuzz")
+            elif (self.c % 3 == 0):
+                self.strings.append("Fizz")
+            elif (self.c % 5 == 0):
+                self.strings.append("Buzz")
+            else:
+                self.strings.append(str(self.c))
+            self.c += 1
+            self.fizzBuzz(n)
+        return self.strings
