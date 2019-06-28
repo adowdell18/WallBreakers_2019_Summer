@@ -1,0 +1,13 @@
+class Solution(object):
+    def reverseWords(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        
+        s_arr = s.split(" ")
+        reversed_tokens = []
+        for token in s_arr:
+            tok = ''.join(reversed(token))
+            reversed_tokens.append(tok)
+        return " ".join(reversed_tokens)
