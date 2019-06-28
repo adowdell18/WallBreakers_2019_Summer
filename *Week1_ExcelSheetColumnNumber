@@ -1,0 +1,10 @@
+    def titleToNumber(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        total = 0
+        for letter in s:
+            total = ord(letter) + (total* 26)
+            total = total - 64
+        return total   
