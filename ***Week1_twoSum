@@ -12,4 +12,3 @@ class Solution(object):
                 return ([sum_hash[target-c_num], ind])
                 break
             sum_hash[c_num] = ind
-        return ([])
