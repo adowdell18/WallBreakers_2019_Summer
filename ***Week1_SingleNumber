@@ -1,8 +1,0 @@
-class Solution(object):
-    def singleNumber(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        solution = reduce(operator.xor, nums)
-        return solution
